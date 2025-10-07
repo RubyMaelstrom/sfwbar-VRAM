@@ -1,0 +1,11 @@
+include("gpu.source")
+
+layout {
+  chart {
+    interval = 2000
+    style    = If(XGpuPresent, "gpu_chart", "hidden")
+    value    = XGpuUtilization
+    tooltip  = "GPU: " + Str(XGpuUtilization*100) + '%' + ' (' + Str(GpuUsedMiB, 0) + '/' + Str(GpuTotalMiB, 0) + ' MiB)'
+    action   = Exec $Term + " -e nvidia-smi -l 1"
+  }
+}

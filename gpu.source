@@ -1,0 +1,10 @@
+# Use a single GPU line; -i 0 = GPU 0. Change to -i 1 if needed.
+scanner {
+  Exec("nvidia-smi -i 0 --query-gpu=memory.used,memory.total --format=csv,noheader,nounits") {
+    GpuUsedMiB  = RegEx("^\\s*([0-9]+)")
+    GpuTotalMiB = RegEx("^\\s*[0-9]+\\s*[, ]+\\s*([0-9]+)")
+  }
+}
+
+Set XGpuPresent     = GpuTotalMiB.count           # >0 if parsed
+Set XGpuUtilization = If(GpuTotalMiB>0, GpuUsedMiB / GpuTotalMiB, 0)  # 0..1
