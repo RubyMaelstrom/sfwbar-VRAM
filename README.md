@@ -1,4 +1,4 @@
-A VRAM percentage chart widget config for your sfwbar.
+A VRAM percentage chart widget for your sfwbar.
 
 Download the gpu.source and gpu.widget files and put them in your ~/.config/sfwbar directory.
 
