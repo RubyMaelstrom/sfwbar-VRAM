@@ -4,7 +4,7 @@ Download the gpu.source and gpu.widget files and put them in your ~/.config/sfwb
 
 Includes an example sfwbar.config file with the default config plus the gpu widget added.
 
-Essentially, just add this to your sfwbar.config wherever you want the widget on your bar:
+If you want to use your existing sfwbar.config, just add this wherever you want the widget on your bar:
 
 `include("gpu.widget")`
 
