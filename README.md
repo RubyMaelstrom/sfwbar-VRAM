@@ -1,5 +1,7 @@
 A VRAM percentage chart widget for your sfwbar.
 
+IMPORTANT NOTE: This is for NVIDIA GPUs, if you want AMD percentages you'll need to do some slight editing in gpu.source.
+
 Download the gpu.source and gpu.widget files and put them in your ~/.config/sfwbar directory.
 
 Includes an example sfwbar.config file with the default config plus the gpu widget added.
